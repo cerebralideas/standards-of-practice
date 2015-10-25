@@ -1,4 +1,4 @@
-# Engineering Standards of Conduct
+# Engineering Conduct Standards
 
 **Unity from Diversity through Empowerment.**
 
