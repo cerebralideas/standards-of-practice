@@ -4,4 +4,4 @@
 
 In short: be nice, be respectful, be mindful and last but not least, community over individual.
 
-#### Unity from Diversity through Empowerment
+> Unity from Diversity through Empowerment
