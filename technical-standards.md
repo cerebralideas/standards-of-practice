@@ -1,4 +1,4 @@
-# Technical Standards
+# Technical Standards - Full
 
 ## I. Code authoring
 
