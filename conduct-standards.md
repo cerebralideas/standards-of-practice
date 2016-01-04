@@ -1,4 +1,4 @@
-# Engineering Code of Conduct
+# Conduct Standards – Full
 
 **Unity from Diversity through Empowerment.**
 
@@ -18,9 +18,12 @@ There are three subjects that should be avoided while at work:
 
 Not that these are inherently evil/bad subjects, but to ensure we preserve a unified, diverse community, we need to respect the fact that these are sensitive topics for many. This alone will create a more inclusive, conflict-free environment that will increase the cohesiveness of all in our community.
 
+A supportive community is what creates resilient individuals, and resilience is what's need to endure the frustrations commonly seen in competitive tech environments[2].
+
+
 ### a. Be nice/Be respectful
 
-To build a successful community, we must see each other, no matter how similar or different[2], as a crucial part of this community, and its success. That means we leave the personal differences and beliefs at the door and treat everyone with the respect and the patience they need to flourish and be successful.
+To build a successful community, we must see each other, no matter how similar or different[3], as a crucial part of this community, and its success. That means we leave the personal differences and beliefs at the door and treat everyone with the respect and the patience they need to flourish and be successful.
 
 This helps cultivate a quality environment for producing quality products. There is *no way* the environment in which we work has *no* impact on the products we produce, and eventually, the quality of the customer experience. The more empowering and inclusive our environment, the better the over quality of PayPal’s products and services.
 
@@ -50,7 +53,7 @@ Last by not least, take breaks, go out for lunch, laugh. Find inclusive ways to 
 
 ### a. Don’t be afraid to push back/say “No”
 
-Operating within an environment that empowers individuals to push back and/or say *no* is crucial to quality output[3]. But, “with great power comes great responsibility”, so a *no* should always be followed up by a well articulated rationale and/or educational response. 
+Operating within an environment that empowers individuals to push back and/or say *no* is crucial to quality output[4]. But, “with great power comes great responsibility”, so a *no* should always be followed up by a well articulated rationale and/or educational response. 
 
 **A “No” is always customer focused**.
 
@@ -74,7 +77,7 @@ If speed is prioritized over quality, then an agreement has to be made between e
 
 ### c. Code ownership/PR reviews
 
-**Writing code for an organization like PayPal is *not* an expression of your individuality.** *It should express the standards and conventions of the community that owns it.*[4] Code reviews should be a daily process between us all and should be an engineer’s way to converse about the product.
+**Writing code for an organization like PayPal is *not* an expression of your individuality.** *It should express the standards and conventions of the community that owns it.*[5] Code reviews should be a daily process between us all and should be an engineer’s way to converse about the product.
 
 Critiques of code should never be given or interpreted as a critique of the author. They should always be given as a representation of the community and should be taken as the community speaking about the product overall.
 
@@ -116,7 +119,7 @@ Contact a senior engineer or engineering manager for resolution, but whatever yo
 
 Let the manager or senior engineer set the final word; accept it, and move on. Again, we don’t author code to express our individuality or creativity. We write code for our customers and for PayPal.
 
-## 4. Build with empathy [5,6]
+## 4. Build with empathy [6,7]
 
 Everything we build needs to be built with a deep consideration for the user. Because we build things that millions of people use, we have to be cognizant that we have a responsibility due to the trust that millions of users put into our hands.
 
@@ -129,9 +132,10 @@ One careless mistake could potentially facilitate in a family losing their abili
 ## Footnotes:
 
 1. This CoC does not alter, in any way, any other terms or conditions of employment with PayPal, but it’s to be treated as an addition to them.
-2. “Different” could be, but not limited to, race, color, ethnicity, gender, sexual orientation, gender expression …
-3. [The importance of saying “no”](http://www.productstrategymeanssayingno.com/)
-4. “Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.” – [Ref](http://c2.com/cgi/wiki?CodeForTheMaintainer)
+2. [People who succeed against the odds all have one thing in common](http://qz.com/536610/people-who-succeed-against-the-odds-all-have-one-thing-in-common/)
+3. “Different” could be, but not limited to, race, color, ethnicity, gender, sexual orientation, gender expression …
+4. [The importance of saying “no”](http://www.productstrategymeanssayingno.com/)
+5. “Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.” – [Ref](http://c2.com/cgi/wiki?CodeForTheMaintainer)
 
-5. [How (We) Destroyed the World](https://vimeo.com/68470326)
-6. [Design with Empathy](https://youtu.be/KtcM4l5qd4A)
+6. [How (We) Destroyed the World](https://vimeo.com/68470326)
+7. [Design with Empathy](https://youtu.be/KtcM4l5qd4A)
