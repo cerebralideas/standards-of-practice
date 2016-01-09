@@ -58,7 +58,7 @@ The title pretty much says it all. If there’s any chance that this isn’t eas
 
 ### E. Code Coverage
 
-Code coverage gives a good grasp of all the code paths executed in a unit of code. Do we have some code coverage identified in every organization?
+Code coverage gives a good grasp of all the code paths executed in a unit of code. Code coverage tools, and metrics around them, helps identify dead code, making sure all paths of the code are covered and dead paths removed.
 
 ## II. Automation
 
