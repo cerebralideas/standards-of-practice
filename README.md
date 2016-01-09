@@ -1,5 +1,6 @@
-# Raising the Bar
-## Standards for PayPal Austin Engineering
+![snap 2016-01-09 at 17 45 46 1465x416](https://github.paypal.com/github-enterprise-assets/0000/6574/0001/1833/d78c3c5a-b6f8-11e5-9f71-bf5237712377.png)
+
+## Austin's Engineering Excellence Initiative
 
 Software engineering at scale can be just as much a war of attrition against a sometimes insurmountable mountain of frustration as it is a test of raw dev skill. If we are to "raise the bar" for our collective engineering effort, we need to consciously remove as many of these frustrations as possible.
 
