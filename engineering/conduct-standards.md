@@ -45,15 +45,15 @@ Most importantly, ask for help. This should go without saying, but too many time
 
 Often, the reason engineers are afraid to ask for help is they are afraid of being judged or criticized for not knowing something. This is the biggest reason to create the above mentioned environment. We need to remove the negative stigma of asking for, or needing, help. Asking for help is absolutely crucial as no one knows everything, even the most senior of engineers.
 
-### d. Have fun and ensure others do at well
+### d. Have fun and ensure others do as well
 
-Last by not least, take breaks, go out for lunch, laugh. Find inclusive ways to bring other aspects of enjoyment into our workplace. There's nothing prescriptive here other than just try to find ways to break the frustration and stress.
+Last by not least, take breaks, go out for lunch, laugh. Find inclusive ways to bring other aspects of enjoyment into our workplace. There's nothing prescriptive here other than just try to find ways to break the frustration and stress[4].
 
 ## 2. Everything is a conversation
 
 ### a. Don’t be afraid to push back/say “No”
 
-Operating within an environment that empowers individuals to push back and/or say *no* is crucial to quality output[4]. But, “with great power comes great responsibility”, so a *no* should always be followed up by a well articulated rationale and/or educational response. 
+Operating within an environment that empowers individuals to push back and/or say *no* is crucial to quality output[5]. But, “with great power comes great responsibility”, so a *no* should always be followed up by a well articulated rationale and/or educational response. 
 
 **A “No” is always customer focused**.
 
@@ -77,7 +77,7 @@ If speed is prioritized over quality, then an agreement has to be made between e
 
 ### c. Code ownership/PR reviews
 
-**Writing code for an organization like PayPal is *not* an expression of your individuality.** *It should express the standards and conventions of the community that owns it.*[5] Code reviews should be a daily process between us all and should be an engineer’s way to converse about the product.
+**Writing code for an organization like PayPal is *not* an expression of your individuality.** *It should express the standards and conventions of the community that owns it.*[6] Code reviews should be a daily process between us all and should be an engineer’s way to converse about the product.
 
 Critiques of code should never be given or interpreted as a critique of the author. They should always be given as a representation of the community and should be taken as the community speaking about the product overall.
 
@@ -119,7 +119,7 @@ Contact a senior engineer or engineering manager for resolution, but whatever yo
 
 Let the manager or senior engineer set the final word; accept it, and move on. Again, we don’t author code to express our individuality or creativity. We write code for our customers and for PayPal.
 
-## 4. Build with empathy [6,7]
+## 4. Build with empathy [7,8]
 
 Everything we build needs to be built with a deep consideration for the user. Because we build things that millions of people use, we have to be cognizant that we have a responsibility due to the trust that millions of users put into our hands.
 
@@ -134,8 +134,8 @@ One careless mistake could potentially facilitate in a family losing their abili
 1. This CoC does not alter, in any way, any other terms or conditions of employment with PayPal, but it’s to be treated as an addition to them.
 2. [People who succeed against the odds all have one thing in common](http://qz.com/536610/people-who-succeed-against-the-odds-all-have-one-thing-in-common/)
 3. “Different” could be, but not limited to, race, color, ethnicity, gender, sexual orientation, gender expression …
-4. [The importance of saying “no”](http://www.productstrategymeanssayingno.com/)
-5. “Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.” – [Ref](http://c2.com/cgi/wiki?CodeForTheMaintainer)
-
-6. [How (We) Destroyed the World](https://vimeo.com/68470326)
-7. [Design with Empathy](https://youtu.be/KtcM4l5qd4A)
+4. [John Clease on Creativity](https://www.youtube.com/watch?v=Qby0ed4aVpo)
+5. [The importance of saying “no”](http://www.productstrategymeanssayingno.com/)
+6. “Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live.” – [Ref](http://c2.com/cgi/wiki?CodeForTheMaintainer)
+7. [How (We) Destroyed the World](https://vimeo.com/68470326)
+8. [Design with Empathy](https://youtu.be/KtcM4l5qd4A)
