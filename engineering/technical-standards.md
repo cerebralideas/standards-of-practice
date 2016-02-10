@@ -34,9 +34,9 @@ Classical inheritance (what I call vertical inheritance) has many consequences. 
 
 ### C. Functional over object-oriented
 
-Of course, many programming language require “classes” and object oriented conventions to instantiate usable objects. But, these programming patterns have side-effects: implicit state, vertical inheritance, exposure of implementation details …
+Many programming language promote OOP with classes. But, these programming models can have side-effects: implicit state, vertical inheritance, exposure of implementation details etc.
 
-Rather, when possible focus on writing in a more “functional” nature without an adherence on implicit state and side-effect free functions. This leads to more declarative, explicit code that is easier to maintain and bug free. 
+Rather, when possible use a “functional programming” model without an adherence on implicit state and side-effect free functions.  This leads to more declarative and explicit code that will be easier to maintain and can be better performing.
 
 #### 1. Declarative over imperative
 
@@ -58,37 +58,43 @@ The title pretty much says it all. If there’s any chance that this isn’t eas
 
 ### E. Code Coverage
 
-Code coverage gives a good grasp of all the code paths executed in a unit of code. Code coverage tools, and metrics around them, helps identify dead code, making sure all paths of the code are covered and dead paths removed.
+Code coverage gives a good grasp of all the code paths executed via tests in a unit of code. Code coverage tools, and metrics around them, helps identify untested code paths, making sure all primary paths of code are covered.
 
 ## II. Automation
 
 ### A. Static code analysis
 
-Nothing’s worse than having to argue over syntactic variations (tabs v. spaces). Leverage static code analysis tools, like syntax “linters” or type checkers, while building, pushing, CI … and let enforce the law of the land.
+Nothing’s worse than having to argue over syntactic variations (tabs v. spaces). Leverage static code analysis tools, like syntax “linters” or type checkers, while building, pushing, CI … and let them enforce the law of the land.
 
 The more developers can focus on the substantive critiques of code the better, so use these tools to avoid the minute syntax arguments.
 
 ### B. Testing
 
-Testing removes the need to manually review your application’s functionality. Humans are bad at repetition, so don’t make them do it.
+Testing removes the need to manually review your application’s functionality after a change. Humans are bad at repetition,
+so don’t make them do it.
 
-#### 1. Unit tests
+#### 1. Unit ("small") tests
 
-Unit tests address functional units of code and should not require any external data or functionality and be entirely self contained.
+Unit tests address small pieces of code and should not require any external data or functionality and be entirely self contained and quick to run.
 
-#### 2. Functional tests
+#### 2. Functional (sometimes "medium") tests
 
-This tests the entire end-to-end flow of your application.
+These tests perform a high level verification of some (usually exposed) functionality than unit/small tests. As an example a functional test may verify that Paypal user can login with a chrome browser.
 
-#### 3. Test case review DEV + CQ
+#### 3. System / End to End (also known as "large") tests
+
+These tests perform a more complex flow or touch a variety of different services / domains. And example of this may be on boarding a PayPal user, setting up the user with a bank account and verifying they can send money.
+
+#### 4. Test case review DEV + CQ
 
 To have better understanding and most importantly to get the same understanding between both DEV and CQ.
 
-#### 4. Test case Automation in CQ
+#### 5. Test case Automation
 
-It is important to have fully automated test cases which allow us to perform regression automatically.
+It is important to have fully automated test cases which allow us to perform regression automatically without a complex
+manual setup.
 
-### C. Automate all the things
+### C. Automate everything
 
 Automate anything that can be automated. Spend the time to build the necessary tools and utilities.
 
@@ -129,7 +135,7 @@ Once code is in the dedicated, main branch, it cannot be rewritten. This is law!
 
 #### 1. README.md
 
-This file is placed at the root of your project and is intended to introduce a newcomer to the project. It includes the following: 
+This file is placed at the root of your project and is intended to introduce a newcomer to the project. It includes the following:
 
 - the proper name of the project
 - a summary of it’s purpose
@@ -145,7 +151,7 @@ For more examples of a CONTRIBUTING.ms file, see here: [Angular.js](https://gith
 
 #### 2. Code reviews
 
-It is very important to make sure we review each other’s code before it makes its way into production. Not only does this ensure that mistakes are caught, but we can all become better developers by learning from each other. 
+It is very important to make sure we review each other’s code before it makes its way into production. Not only does this ensure that mistakes are caught, but we can all become better developers by learning from each other.
 
 Each team needs to have a process by which each developer spends at least an hour a day for posted, code reviews, if there is code to review. The best opportunity is via Github and the concept of pull requests (or PRs).
 
@@ -164,7 +170,7 @@ But, the only things that is required are that the above two criteria are met.
 
 This should be obvious, but merging your own PR into the main branch is not allowed. The only exception is if your modifying documentation or version bumping the meta information (e.g. the version tag on the package.json).
 
-PRs are to exist in an open state for a few hours at the very least, days are recommended. This gives other engineers time to review code and allow multiple pairs of eyes to provide feedback. PRs that contain code changes that are opened and merged within minutes are not allowed.
+PRs are to exist in an open state for a few hours at the very least, days are recommended (but no longer then a few days). This gives other engineers time to review code and allow multiple pairs of eyes to provide feedback. PRs that contain code changes that are opened and merged within minutes are not allowed.
 
 #### 4. Ensure conformity for all PRs
 
@@ -180,7 +186,7 @@ Are the sources for your components open to all developers outside your team and
 
 ### C. Bug Tracking System
 
-An official bug tracking system is necessary for proper product maintenance. The location of the bug tracking should be linked in your project’s README.md and should be open to external submission of tickets. 
+An official bug tracking system is necessary for proper product maintenance. The location of the bug tracking system/project should be identified and linked from your project’s README.md and should be open to external submission of tickets.
 
 Your SLA needs to be publicly documented.
 
