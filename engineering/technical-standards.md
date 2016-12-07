@@ -1,4 +1,4 @@
-# Technical Standards - Full
+# Technical Standards
 
 ## I. Code authoring
 
@@ -8,43 +8,45 @@ To do that, we have compiled a list of philosophies and approaches to higher lev
 
 ### A. Write code for the maintainers, not for the computers
 
-Computers can understand and execute the ugliest of code as long as it’s syntactically correct. This does not apply to humans. Because of this, the largest reason for standards in code authoring is for the human that will eventually own the code you write.
+Computers can understand and execute the ugliest of code as long as it’s syntactically correct. This does not apply to humans. Because of this, the largest reason for standards in code authoring is for the humans that own/read/maintain the code you write.
 
-Know that the original author of code is almost never the final maintainer of the code, so don’t write code for yourself. Write code for the unfortunate engineer that has to adopt it after inheriting it *from you*.
+Know that the original author of code is almost never the final maintainer of the code, so don’t write code for yourself. Write code for the future engineer that has to adopt it after inheriting it *from you*.
 
 #### 1. Writing code is NOT an expression of individuality
 
-Code is community owned, represents PayPal and is explicitly for the customer. This means that all code looks like a single person wrote it with the express intent of the customer, as much as possible (don’t take this to a logical extreme).
+Code is community owned, represents PayPal and is explicitly for the customer and company. This means that all code looks like a single person wrote it with the express intent of the customer, as much as possible (don’t take this to a logical extreme).
 
-Conformity has a much higher value then uniqueness when it comes to the scale of PayPal and the reach of its products.
+Conformity has a much higher value then uniqueness when it comes to the scale of PayPal and the reach of its products. If you want to propose a change or a new pattern, raise it to the team and come to a conclusion, **and then document that change**.
 
 #### 2. Cleverness has little long-term value
 
-Let us not confuse clever with smart. Cleverness can easily lead to hard to maintain, difficult to understand and frustrating to debug code as it focuses on the wrong goals: micro-optimizations or ultra succinctness. If there’s a more mundane/boring way to write code, that’s the preferred, smart way.
+Let us not confuse clever with smart. Cleverness can easily lead to hard to maintain, difficult to understand and frustrating to debug code as it focuses on the wrong goals: micro-optimizations or ultra succinctness. If there’s a more mundane/boring/verbose way to write code, that’s the preferred, "smart" way.
 
 ### B. Design Patterns (Gang of Four)
 
-#### 1. Program to an interface, not an implementation
+#### 1. Program to an interface, not an implementation[1]
 
-Whether it’s a module, widget, REST API, a model … write code that expresses an interface without the exposure of the implementation. Embrace the idea of public versus private, adhering to conventions and having a small, easy to understand footprint.
+There are language specific interpretations of this design principle, but I take this a bit more generic. The short of it is focus on how your API is going to be used, not how you have to implement the functionality.
 
-#### 2. Composition over inheritance
+Whether it’s a module, widget, REST API, a model … write code that expresses an interface without the exposure of the implementation. Embrace the idea of public versus private, adhering to conventions and having a small, easy to understand footprint. Don't forget about the principle of least privilege.
 
-Classical inheritance (what I call vertical inheritance) has many consequences. Composition (or what I call horizontal inheritance) is much easier to reason-about, debug and maintain. Try to avoid tall vertical inheritance models as they can be fragile and hard to maintain. Focus more on shallow inheritance models, aka composition.
+#### 2. Composition over inheritance[2]
 
-### C. Functional over object-oriented
+Classical inheritance (what I call vertical inheritance) has many consequences. Composition (or what I call horizontal inheritance) is much easier to reason-about, debug and maintain. Try to avoid tall vertical inheritance structures as they can be fragile and hard to maintain (fragile base class problem). Focus more on shallow inheritance models, aka composition.
 
-Many programming language promote OOP with classes. But, these programming models can have side-effects: implicit state, vertical inheritance, exposure of implementation details etc.
+### C. Functional over object-oriented[3]
 
-Rather, when possible use a “functional programming” model without an adherence on implicit state and side-effect free functions.  This leads to more declarative and explicit code that will be easier to maintain and can be better performing.
+Many programming language promote OOP with classes. But, these programming models can have side-effects: implicit state, vertical inheritance, exposure of implementation details, etc. Of course, there are time where OOP is necessary; in those times, use it. This rule is more about preferring functional over OO.
 
-#### 1. Declarative over imperative
+Rather, when possible use a “functional programming” approach without an adherence on implicit state and side-effect free functions.  This leads to more declarative, decoupled, explicit, and modular code that will be easier to maintain and can be better performing.
+
+#### 1. Declarative over imperative[4]
 
 Nothing is harder to grok, maintain and debug than imperative code. Rather than thinking in terms of writing procedural statements, write code that describes what it needs to do, not how. That way, each function describes its purpose and encapsulates the implementation of the logic and those hard to read procedural statements.
 
 #### 2. Explicit over implicit
 
-Write code in a way that limits it’s reliance on implicit state, especially when that state is mutable. Explicit code is always preferred because it’s contained, predictable and side-effect free. Don’t fall into the banana-gorilla problem.
+Write code in a way that limits it’s reliance on implicit state (state that "just exists" within the environment), especially when that state is mutable. Explicitness (operate only on what has been explicitly supplied) is always preferred because it’s contained, predictable and side-effect free. Don’t fall into the banana-gorilla problem[5].
 
 ### D. Communicate with code
 
@@ -60,43 +62,41 @@ The title pretty much says it all. If there’s any chance that this isn’t eas
 
 Code coverage gives a good grasp of all the code paths executed via tests in a unit of code. Code coverage tools, and metrics around them, helps identify untested code paths, making sure all primary paths of code are covered.
 
+But, there is a dark-side to code coverage, and that's writing nearly worthless tests just to inflate your numbers. Some encourage the enforcement an arbitrary number or a continuously increasing number. More times than not, this can cause developers to just write tests that have very little value to get their code checked-in.
+
 ## II. Automation
 
 ### A. Static code analysis
 
-Nothing’s worse than having to argue over syntactic variations (tabs v. spaces). Leverage static code analysis tools, like syntax “linters” or type checkers, while building, pushing, CI … and let them enforce the law of the land.
+Nothing’s worse than having to argue over syntactic variations (tabs v. spaces). Leverage static code analysis tools, like syntax “linters” or type checkers, to ensure the *correctness* of your program while building, pushing, CI … and let them enforce the law of the land.
 
 The more developers can focus on the substantive critiques of code the better, so use these tools to avoid the minute syntax arguments.
 
 ### B. Testing
 
-Testing removes the need to manually review your application’s functionality after a change. Humans are bad at repetition,
-so don’t make them do it.
+Automated testing removes the need to manually review your application’s functionality after a change. Humans are bad at repetition, so don’t make them do it.
 
 #### 1. Unit ("small") tests
 
-Unit tests address small pieces of code and should not require any external data or functionality and be entirely self contained and quick to run.
+Unit tests address small pieces of code and should not require any external data or functionality and be entirely self contained and quick to run. If you have to bootstrap your whole app or start up a server to run your unit tests, something's wrong.
 
-#### 2. Functional (sometimes "medium") tests
+Unit tests should be fast and simple requiring just the unit itself to successfully test.
 
-These tests perform a high level verification of some (usually exposed) functionality than unit/small tests. As an example a functional test may verify that Paypal user can login with a chrome browser.
+#### 2. Functional (sometimes "medium" sized) tests
+
+These tests perform a high level verification of some (usually exposed) functionality than unit/small tests. As an example a functional test may verify the method that accepts incoming requests with the expected parameters, maps them accordingly and outputs the appropriate database query. This single test may involve 3, 4 or 5 separate units of code.
+
+The point is to test the composition of units, but should still be testable without starting up your entire environment.
 
 #### 3. System / End to End (also known as "large") tests
 
 These tests perform a more complex flow or touch a variety of different services / domains. And example of this may be on boarding a PayPal user, setting up the user with a bank account and verifying they can send money.
 
-#### 4. Test case review DEV + CQ
-
-To have better understanding and most importantly to get the same understanding between both DEV and CQ.
-
-#### 5. Test case Automation
-
-It is important to have fully automated test cases which allow us to perform regression automatically without a complex
-manual setup.
+This usually requires an entire stage system being started with the required external services up and running. These tests are usually fewer than unit tests as they are slow and cumbersome.
 
 ### C. Automate everything
 
-Automate anything that can be automated. Spend the time to build the necessary tools and utilities.
+Automate anything that can be automated. Spend the time to build the necessary tools and utilities upfront. In the long term, you want to be focused on writing what's unique about your task, not what's common.
 
 #### 1. Immediate feedback is best
 
@@ -113,6 +113,7 @@ The best is immediate feedback from IDEs or CLI watchers that alarm when somethi
 To reduce complication is collaborating with a team of developers, the best practice is to have a unidirectional flow of code modifications.
 
 #### 2. Communicate through commits messages
+
 A commit message is recommended to be verbose and informative. Use an unqualified commit, , to be allowed to create a commit title and commit body.
 
 Establish a formulae for constructing this commit message. Don’t just allow gibberish in commit messages.
@@ -127,11 +128,11 @@ A git log should never show commit messages of “Oops, typo O_o” or “git is
 
 Rewriting history is a powerful tools for keeping a well maintained git log. But, “with great power comes great responsibility”, so never, ever rewrite public history or another’s history.
 
-Once code is in the dedicated, main branch, it cannot be rewritten. This is law!
+Once code is in the dedicated, main branch, or shared with another developer to build upon, it cannot be rewritten. This is law!
 
 ### B. Documentation
 
-(Note: `.md` refers to a “Markdown” file. It’s just a very simple formatted text file. [See Github’s style of Markdown for more details](https://help.github.com/articles/github-flavored-markdown/))
+[Note: `.md` refers to a “Markdown” file. It’s just a very simple formatted text file. [See Github’s style of Markdown for more details](https://help.github.com/articles/github-flavored-markdown/)]
 
 #### 1. README.md
 
@@ -170,7 +171,7 @@ But, the only things that is required are that the above two criteria are met.
 
 This should be obvious, but merging your own PR into the main branch is not allowed. The only exception is if your modifying documentation or version bumping the meta information (e.g. the version tag on the package.json).
 
-PRs are to exist in an open state for a few hours at the very least, days are recommended (but no longer then a few days). This gives other engineers time to review code and allow multiple pairs of eyes to provide feedback. PRs that contain code changes that are opened and merged within minutes are not allowed.
+PRs are to exist in an open state for a few hours at the very least, days are recommended. This gives other engineers time to review code and allow multiple pairs of eyes to provide feedback. PRs that contain code changes that are opened and merged within minutes are not allowed.
 
 #### 4. Ensure conformity for all PRs
 
@@ -182,7 +183,7 @@ End to end release process needs to be identified and documented, hopefully with
 
 #### 6. Open (internal) Source
 
-Are the sources for your components open to all developers outside your team and do you accept contributions? Github’s public repos are preferred to allow external collaboration.
+Are the sources for your components open to all developers outside your team and do you accept contributions? Github’s internal, public repos are preferred to allow external (to the team) collaboration.
 
 ### C. Bug Tracking System
 
@@ -196,4 +197,12 @@ We recommend having an end to end CI (continuous integration) process/pipeline i
 
 The team working on your component should be responsible for the current  “health” of your CI and should know if your CI pipeline is “green” or “red”.   Your CI pipeline needs to be visible to all users and everyone on the team knows how to get the code coverage and test success metrics.
 
-We recommend Releases of any artifacts always be done from the same CI pipeline. This is to ensure that release artifacts actually match what’s been building, deploying and testing day in and day out.
+We recommend releases of any artifacts always be done from the same CI pipeline. This is to ensure that release artifacts actually match what’s been building, deploying and testing day in and day out.
+
+## Footnotes:
+
+1. [Program to an interface](https://www.quora.com/In-a-design-pattern-principle-what-does-Program-to-an-interface-not-an-implementation-mean/answer/Jaryl-Sim)
+2. [Composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance)
+3. [When FP? And when OOP?](http://raganwald.com/2013/04/08/functional-vs-OOP.html)
+4. [Declarative over imperative](https://www.netguru.co/blog/imperative-vs-declarative)
+5. [OOP Quotes](http://harmful.cat-v.org/software/OO_programming/)

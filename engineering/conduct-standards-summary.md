@@ -1,4 +1,4 @@
-## We believe the following are critical to our engineering success:
+## The following is a summarization of our conduct standards:
 
 ### 1. Reduce environmental frictions
 

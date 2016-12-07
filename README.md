@@ -1,4 +1,4 @@
-# Team Six's Standards of Practice
+# Consumer Web Account Servicing's Standards of Practice
 
 Software engineering at scale can be just as much a war of attrition against a sometimes insurmountable mountain of frustration as it is a test of raw dev skill. If we are to "raise the bar" for our collective engineering effort, we need to consciously remove as many of these frustrations as possible.
 
