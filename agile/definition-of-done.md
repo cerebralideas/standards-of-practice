@@ -2,8 +2,10 @@
 
 - Code complete to story definition (Acceptance Criteria)
 - UED review of on-the-fly changes
-- Core accessibility taken into account and feature is keyboard accessible with basic screen-reader support
-- Localization PR merged before content cut-off
+- Core accessibility taken into account
+  - feature is keyboard accessible
+  - basic screen-reader support is tested
+- Localization PR merged before content cut-off (Thursday afternoon)
 - Unit tests created & passed
 - View tests created & passed
 - E2E (Nemo) tests written, reviewed, & passed
