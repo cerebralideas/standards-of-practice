@@ -1,4 +1,6 @@
-# Engineer for Change: JavaScript Analysis
+# JavaScript Architecture
+
+**Engineering for Change**
 
 What do I mean by “change”?
 
