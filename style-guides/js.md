@@ -222,7 +222,7 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 
 1. Declare functions, especially if you prefer the function expression style at the top of the respective scope. This is due to function and variable hoisting mentioned above in variable declarations.
 
-1. Functional continuation calls with inline callbacks:
+1. **Functional continuation calls** with inline callbacks:
 
 		myArray.map(function (obj, idx) {
 				return [ obj.id, obj.name ];
@@ -230,12 +230,12 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 				return prev[curr.id] = { name: curr.name };
 			}, {});
 			
-	Notice how everything seems double indented above. That helps the eye understand that it's one line continuation, rather than multiple separate function calls. It's basically the same as doing this:
+	Notice how some things seem double indented above. That helps the eye understand that it's one line continuation, rather than multiple separate function calls. It's basically the same as doing this:
 	
 		var oneVeryLongString = "This is going to be a long paragraph that I'm going " +
 			"to break into two lines for easier reading."
 			
-	Notice how I indednted the second line to communicate that it's a line continuation. The same concept is used in the complex functional calls as well.
+	Notice how I indented the second line to communicate that it's a line continuation. The same concept is used in the complex functional calls as well.
 
 ### Quotes
 
