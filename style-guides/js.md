@@ -226,16 +226,36 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 
 		myArray.map(function (obj, idx) {
 				return [ obj.id, obj.name ];
+			// The below is not a new statment, but a continuation on `myArray`
 			}).reduce(function (prev, curr) {
 				return prev[curr.id] = { name: curr.name };
 			}, {});
 			
-	Notice how some things seem double indented above. That helps the eye understand that it's one line continuation, rather than multiple separate function calls. It's basically the same as doing this:
+	You may observe how some things seem double indented. That's because the `function` parameter passed into `map` is actually opening up a second context, hence a second indentation level. That helps the eye understand that it's inside a single line continuation, rather than multiple separate function calls. It's basically the same as doing this:
 	
 		var oneVeryLongString = "This is going to be a long paragraph that I'm going " +
 			"to break into two lines for easier reading."
 			
-	Notice how I indented the second line to communicate that it's a line continuation. The same concept is used in the complex functional calls as well.
+	Or, the same concept is used in the complex objects within a single `var` declaration:
+	
+		var oneObj = {
+				prop: "one",
+			},
+			twoObj = {
+				prop: "two",
+			};
+	
+	We do that so everyone can tell that all those assignments are also declarations on that single `var` keyword. Doing it without this indentation style is harder to read:
+	
+		// Don't do this
+		var oneObj = {
+			prop: "one",
+		},
+		twoObj = {
+			prop: "two",
+		};
+		
+	The above isn't immediately clear that `twoObj` is also a declaration on the above `var` keyword.
 
 ### Quotes
 
