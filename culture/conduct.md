@@ -76,7 +76,7 @@ As an engineer, you represent the engineering department, and you have your prio
 
 To have the conversations we need to ensure quality output, we have to have the necessary time. Whether it’s with product, design, QA or each other, we have to have a process that ensures the time to properly discuss our product. You frequently hear about this through the Agile/Scrum process with grooming, daily standups and retrospectives and such.
 
-As has been said many times, speed and quality are almost always "at ends with each other". It's not one or the other, it's a compromise. Speed without quality produces unmaintainable products, and quality without speed produces products that are late to market or not innovating.
+As has been said many times, speed and quality are almost always "at odds with each other". It's not one or the other, it's a compromise. Speed without quality produces unmaintainable products, and quality without speed produces products that are late to market or not innovating.
 
 **Tradeoffs are always made, but a balance has to be reached between these two aspects of what we do.**
 
@@ -90,7 +90,7 @@ Critiques of code should never be given or interpreted as a critique of the auth
 
 Code comments should be focused on enforcing standards and conventions, maintainability and understandability. Code is almost never wrong, stupid or bad, code is always a result of many factors and compromises, so no comment should communicate such an idea.
 
-**Write code for the future maintainers, knowing that it will it will almost always *not* be you.**
+**Write code for the future maintainers, knowing that it will almost always *not* be you.**
 
 As a code reviewer, one of the most common comments left in a PR should relate to the understandability of code. *Code has a greater impact on the humans that have to maintain it than on the computer that has to execute it.* After a year or so, the large majority of code *will be* maintained by engineers that are not the original authors. This fact is crucial to understand for all.
 
@@ -116,9 +116,9 @@ Each team should have a standards of practice for each language that is used, ho
 
 ### c. “When in Rome”
 
-If the standards of practice do not address the conflict, rely on the existing conventions within the project. This comes from the age old saying, “When in Rome, do as the Romans.”
+If the standards of practice do not address the conflict, rely on the existing conventions within the project. This comes from the age old saying, “When in Rome, do as the Romans do.”
 
-If there’s an established convention already in the project, then let that be the guideline to resolving the conflict. Again, makes sure the code you are writing or reviewing reflects that of the community, not yourself.
+If there’s an established convention already in the project, then let that be the guideline to resolving the conflict. Again, make sure the code you are writing or reviewing reflects that of the community, not yourself.
 
 ### d. When all else fails …
 
