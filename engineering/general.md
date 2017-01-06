@@ -16,7 +16,7 @@ Know that the original author of code is almost never the final maintainer of th
 
 Code is community owned, represents PayPal and is explicitly for the customer and company. This means that all code looks like a single person wrote it with the express intent of the customer, as much as possible (don’t take this to a logical extreme).
 
-Conformity has a much higher value then uniqueness when it comes to the scale of PayPal and the reach of its products. If you want to propose a change or a new pattern, raise it to the team and come to a conclusion, **and then document that change**.
+Conformity has a much higher value than uniqueness when it comes to the scale of PayPal and the reach of its products. If you want to propose a change or a new pattern, raise it to the team and come to a conclusion, **and then document that change**.
 
 #### 2. Cleverness has little long-term value
 
@@ -36,9 +36,9 @@ Classical inheritance (what I call vertical inheritance) has many consequences. 
 
 ### C. Functional over object-oriented[3]
 
-Many programming language promote OOP with classes. But, these programming models can have side-effects: implicit state, vertical inheritance, exposure of implementation details, etc. Of course, there are time where OOP is necessary; in those times, use it. This rule is more about preferring functional over OO.
+Many programming languages promote OOP with classes. But, these programming models can have side-effects: implicit state, vertical inheritance, exposure of implementation details, etc. Of course, there are time where OOP is necessary; in those times, use it. This rule is more about preferring functional over OO.
 
-Rather, when possible use a “functional programming” approach without an adherence on implicit state and side-effect free functions.  This leads to more declarative, decoupled, explicit, and modular code that will be easier to maintain and can be better performing.
+Rather, when possible use a “functional programming” approach, without an adherence on implicit state, using side-effect free functions.  This leads to more declarative, decoupled, explicit, and modular code that will be easier to maintain and can be better performing.
 
 #### 1. Declarative over imperative[4]
 

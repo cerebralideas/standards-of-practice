@@ -222,6 +222,41 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 
 1. Declare functions, especially if you prefer the function expression style at the top of the respective scope. This is due to function and variable hoisting mentioned above in variable declarations.
 
+1. **Functional continuation calls** with inline callbacks:
+
+		myArray.map(function (obj, idx) {
+				return [ obj.id, obj.name ];
+			// The below is not a new statment, but a continuation on `myArray`
+			}).reduce(function (prev, curr) {
+				return prev[curr.id] = { name: curr.name };
+			}, {});
+			
+	You may observe how some things seem double indented. That's because the `function` parameter passed into `map` is actually opening up a second context, hence a second indentation level. That helps the eye understand that it's inside a single line continuation, rather than multiple separate function calls. It's basically the same as doing this:
+	
+		var oneVeryLongString = "This is going to be a long paragraph that I'm going " +
+			"to break into two lines for easier reading."
+			
+	Or, the same concept is used in the complex objects within a single `var` declaration:
+	
+		var oneObj = {
+				prop: "one",
+			},
+			twoObj = {
+				prop: "two",
+			};
+	
+	We do that so everyone can tell that all those assignments are also declarations on that single `var` keyword. Doing it without this indentation style is harder to read:
+	
+		// Don't do this
+		var oneObj = {
+			prop: "one",
+		},
+		twoObj = {
+			prop: "two",
+		};
+		
+	The above isn't immediately clear that `twoObj` is also a declaration on the above `var` keyword.
+
 ### Quotes
 
 Use single quotes if starting a new project, and you have a choice. If adopting a project, use whatever the original developer used as there is no real difference in how JavaScript parses them.
