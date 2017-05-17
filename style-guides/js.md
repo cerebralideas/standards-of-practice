@@ -89,6 +89,10 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 	} else {
 		// statements
 	}
+	
+	function myFunc() {
+		// function body
+	}
 
 ### Assignments, Declarations
 
