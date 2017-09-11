@@ -8,55 +8,6 @@ Before getting started you should ensure you have a functioning environment by f
 
 At this point we are ready to get into the code. Here are some general guidelines to get you started.
 
-### Generate an SSH Key
-
-Generate an SSH key by following these steps:
-
-1. Open Terminal.
-
-2. Paste the text below, substituting in your PayPal email address.
-
-```
-ssh-keygen -t rsa -b 4096 -C "your_email@paypal.com"
-```
-
-This creates a new ssh key, using the provided email as a label.
-
-3. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
-
-4. At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases".
-
-More more details check out [GitHub instructions for Generating SSH Keys](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
-
-### Adding Your SSH Key to Your Account
-
-Follow these steps using your terminal: 
-
-1. Start the ssh-agent in the background.
-
-```
-eval "$(ssh-agent -s)"
-```
-
-You will get an "Agent pid".
-
-2. If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain using Vim (press i to insert text, when done editing, press escape and type ":wq").
-
-```
-Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa
-```
-
-3. Add your SSH private key to the ssh-agent by typing the following in the terminal:
-
-```
-ssh-add -K ~/.ssh/id_rsa
-```
-
-4. Go to your GitHub profile settings (click your picture on the top bar and click settings). Go to the "SSH and GPG keys" page. You will see a form for SSH keys. Click the button for "New SSH key" and enter the title of your choice under "Title" and then paste in the key generated earlier into the "Key" field and hit the green "Add SSH key" button.
-
 ## Cloning a Repo:
 
 1. Go the the repo you want to work with. For example -
