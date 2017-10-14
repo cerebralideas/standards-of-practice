@@ -1,51 +1,21 @@
-# Git workflow suggestions and tips
+# Git Workflow Suggestions and Tips
 
 ## I. Getting started
 
-Before getting started you should ensure you have a functioning environment by following the steps outlined in the {Environment set-up} documentation. Now it's time to discuss some guidelines and workflow processes that will hopefully make your daily life a little easier.
+Before getting started you should ensure you have a functioning environment by following the steps outlined in the [Environment Set-Up](https://github.paypal.com/CXP-Web-R/standards-of-practice/blob/master/onboarding/setting-up-your-environment.md) documentation. Now it's time to discuss some guidelines and workflow processes that will hopefully make your daily life a little easier.
 
-## II. Config
+## II. Workflow
 
-Here's some handy shortcuts that can help save some keystrokes as you will be typing these commands a lot in your day to day activities.
+At this point we are ready to get into the code. Here are some general guidelines to get you started.
 
-These can be inserted in your `~/.gitconfig` file.
-
-```json
-[alias]
-	st  = status -b
-	aa  = add -A
-	au  = add -u
-	cm  = commit
-	co  = checkout
-	cob = checkout -b
-	br  = branch
-	po  = push origin
-	pom = push origin --mirror
-	ss  = stash save
-	sl  = stash list
-	sp  = stash pop
-	sc  = stash clear
-
-	# Merge aliases
-	ours = "!f() { git co --ours $@ && git add $@; }; f"
-	theirs = "!f() { git co --theirs $@ && git add $@; }; f"
-
-[push]
-	default = nothing
-```
-
-## III. Workflow
-
-At this point we are ready to get into the code. Here are some generl guidelines to get you started.
-
-Cloning a repo:
+## Cloning a Repo:
 
 1. Go the the repo you want to work with. For example -
  `https://github.paypal.com/ConsumerWeb-R/moneynodeweb`
 2. In the upper-right hand corner click the **fork** button
 3. You should now be in your copy of the repo and the url should look like - `https://github.paypal.com/{user id}/moneynodeweb`
    * click the **Clone or download** button
-   * make sure you are cloning with SSH and click the small clipboard icon to the right of the text box
+   * **make sure you are cloning with SSH** and click the small clipboard icon to the right of the text box. Once the codebase is on your machine, please follow our standard [Git Practices](https://github.paypal.com/CXP-Web-R/standards-of-practice/blob/master/engineering/general.md) to contribute to any of our projects.
 4. Let's clone our new repo locally
    * open up a terminal by pressing Command + Space and typing *terminal*
    * create a directory to store your code in, this will be the root directory and you will have a folder for each repo in it
