@@ -64,7 +64,7 @@ And, don't do this:
 		doSomething();
 	}
 
-Do this: use whitespace between the keywords and syntax characters to promote readability. Notice the space between the parentheses and the open brace.
+Do this: use whitespace between the keywords and syntax characters to promote readability. Notice the space between the parentheses and the open brace, function and parantheses, between braces and props and brackets and values in arrays.
 
 	if (condition) {
 		// statements
@@ -90,9 +90,16 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 		// statements
 	}
 	
+	function () {
+		// function body
+	}
+	
 	function myFunc() {
 		// function body
 	}
+	
+	var obj = { prop: 'value' };
+	var arr = [ 'one', 'two ];
 
 ### Assignments, Declarations
 
@@ -159,7 +166,7 @@ Do this: use whitespace between the keywords and syntax characters to promote re
 			callback(number * number);
 		}
 
-		square( 10, function(square) {
+		square(10, function(square) {
 			// callback statements
 		});
 
@@ -286,74 +293,74 @@ Whitespace can ruin diffs and make changesets impossible to read. Consider incor
 
 	Do this instead:
 
-		if ( array.length ) ...
+		if (array.length) ...
 
 1. When only evaluating that an array is empty,
 
  	Don't do this:
 
-		if ( array.length === 0 ) ...
+		if (array.length === 0) ...
 
 	Do this instead:
 
-		if ( !array.length ) ...
+		if (!array.length) ...
 
 
 1. When only evaluating that a string is not empty
 
 	Don't do this:
 
-		if ( string !== '' ) ...
+		if (string !== '') ...
 
 	Do this instead:
 
-		if ( string ) ...
+		if (string) ...
 
 
 1. When only evaluating that a string _is_ empty
 
 	Don't do this:
 
-		if ( string === '' ) ...
+		if (string === '') ...
 
 	Do this instead:
 
-		if ( !string ) ...
+		if (!string) ...
 
 1. When only evaluating that a reference is true.
 
 	Don't do this:
 
-		if ( foo === true ) ...
+		if (foo === true) ...
 
 	Do this and take advantage of built in capabilities:
 
-		if ( foo ) ...
+		if (foo) ...
 
 1. When evaluating that a reference is false
 
 	Don't do this:
 
-		if ( foo == false ) ...
+		if (foo == false) ...
 
 	Use negation to coerce a true evaluation instead:
 
-		if ( !foo ) ...
+		if (!foo) ...
 
 	Be careful, this will also match: 0, '', null, undefined, NaN. If you _MUST_ test for a boolean false, then use
 
-		if ( foo === false ) ...
+		if (foo === false) ...
 
 
 1. When only evaluating a ref that might be null or undefined, but NOT false, '' or 0.
 
 	Don't do this:
 
-		if ( foo === null || foo === undefined ) ...
+		if (foo === null || foo === undefined) ...
 
 	Take advantage of == type coercion, like this:
 
-		if ( foo == null ) ...
+		if (foo == null) ...
 
 		// Remember, using == will match a `null` to BOTH `null` and `undefined`
 		// but not `false`, '' or 0
@@ -544,24 +551,21 @@ You are not a human code compiler/compressor, so don't try to be one. Here are a
 1. Objects should be singular nouns
 
 		var myValue = {
-
 			my: value
 		};
 
 1. Arrays and NodeLists should be plural nouns
 
-		var favColors = [blue, red, purple];
+		var favColors = [ blue, red, purple ];
 
 		var listItems = document.getElementsByTagName('li');
 1. Functions should be verbs
 
 		function sayHi() {
-
 			return 'Hi';
 		}
 
 		var sayHi = function () {
-
 			return 'Hi';
 		}
 
@@ -589,28 +593,26 @@ You are not a human code compiler/compressor, so don't try to be one. Here are a
 			iter;
 
 		for (iter = 0 ; iter < length; iter++ ) {
-
 			elements.push( matches[ iter ] );
 		}
 
 1. Use Case to Communicate:
 
 		// Naming basic functions, objects, instances, etc
-
 		camelCase; function and var declarations
 
 		// Naming constructors, prototypes, etc.
-
 		PascalCase; constructor function
 
 
 		// Naming regular expressions
-
 		rDesc = //;
 
 		// Naming a jQuery element
-
 		$element;
+		
+		// Naming an Observable
+		myObservable$;
 
 
 	From the Google Closure Library Style Guide
@@ -786,7 +788,7 @@ Don't do this:
 
 		var ret;
 
-		if ( foo ) {
+		if (foo) {
 			ret = 'foo';
 		} else {
 			ret = 'quux';
