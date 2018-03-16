@@ -825,7 +825,8 @@ Do this instead:
 
 Default style should be a the documentation comment above the code that is subject with no line-space between the comment and the next line of code. Please view the full JSDoc spec to learn more: http://usejsdoc.org/
 
-	/** This is a documentation comment;
+	/** 
+	 * This is a documentation comment;
 	 * Please follow JSDoc convention.
 	 *
 	 * @param one {string}
@@ -837,9 +838,9 @@ Default style should be a the documentation comment above the code that is subje
 
 If things are hairy, split the file, but if you can't, and you want to section your code, use what I call a section comment; text should be ALL-CAPS with a blank line between the comment and the next line of code.
 
-	/**********************************
+	/** ********************************
 	 * THIS STARTS A NEW SECTION      *
-	***********************************/
+	 ***********************************/
 
 	function () …
 
