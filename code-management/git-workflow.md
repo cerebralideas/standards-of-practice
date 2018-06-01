@@ -19,7 +19,7 @@ At this point we are ready to get into the code. Here are some general guideline
 4. Let's clone our new repo locally
    * open up a terminal by pressing Command + Space and typing *terminal*
    * create a directory to store your code in, this will be the root directory and you will have a folder for each repo in it
-   * type - `git clone git@github.paypal.com:{user id}/moneynodeweb`
+   * type - `git clone git@github.paypal.com:{user id}/moneynodeweb.git`
    * now change into your new folder: `cd moneynodeweb`
    * we need to add a new remote called upstream for our new repo, which we can do by typing: `git remote add upstream git@github.paypal.com:ConsumerWeb-R/moneynodeweb.git`
    * pull in the meta data from our new upstream: `git fetch upstream`
